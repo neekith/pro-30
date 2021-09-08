@@ -1,5 +1,5 @@
 class Block{
-    constructor(x, y, width, height) {
+    constructor(x, y, width, height){
         var options = {
             restitution :0.4,
             friction :0.0,
@@ -8,6 +8,7 @@ class Block{
         
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
+        this.visiblity = 255;
         this.height = height;
          this.image= loadImage("block.png")
         World.add(world, this.body);
@@ -31,7 +32,7 @@ class Block{
           
           push();
           
-          //this.visiblity = 255;
+          
           this.visiblity = this.visiblity-5;
           //this.visiblity = this.x;
           //this.visiblity = this.body.position.x;
